@@ -3,4 +3,4 @@ public class Ejecutar {
         System.out.println("Hola Mundo!!! JAVA");
     }
 }
-//Mirar la sintaxis de java para la proxima clase//
+// Mirar la sintaxis de java para la proxima clase//
