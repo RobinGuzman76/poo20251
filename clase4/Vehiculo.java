@@ -26,15 +26,37 @@ public class Vehiculo {
         return marca;
     }
 
+    // this.marca hace referencia al atributo de la clase
+    // marca hace referencia al parámetro del método
     public void setMarca(String marca) {
-        // this.marca hace referencia al atributo de la clase
-        // marca hace referencia al parámetro del método
         this.marca = marca;
     }
 
+    // Métodos de la clase
+    // Permite mostrar el estado del objeto
     public String toString() {
         return "Vehiculo {Marca: " + marca + "\nColor: " + color + "\nCilindraje: " + cilindraje + "\nChassis: "
          + chassis + "\nPeso: " + peso + "\nPotencia: " + potencia + "}";
+    }
+
+    public void acelerar() {
+        System.out.println("El vehículo está acelerando");
+    }
+    
+    public void frenar() {
+        System.out.println("El vehículo está frenando");
+    }
+
+    public void girarIzquierda() {
+        System.out.println("El vehículo está girando a la izquierda");
+    }
+
+    public void girarDerecha() {
+        System.out.println("El vehículo está girando a la derecha");
+    }
+
+    public void retroceder() {
+        System.out.println("El vehículo está retrocediendo");
     }
 
 }
