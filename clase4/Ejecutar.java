@@ -18,6 +18,13 @@ public class Ejecutar {
         System.out.println(objvehiculo1.toString());
         System.out.println(objvehiculo2);
 
-    }
-    
+        // Llamar a los métodos de la clase Vehiculo
+        System.out.println(objvehiculo1.getMarca());
+        objvehiculo1.acelerar();
+        System.out.println(objvehiculo2.getMarca());
+        objvehiculo1.frenar();
+        objvehiculo1.girarIzquierda();
+        objvehiculo1.girarDerecha();
+        objvehiculo1.retroceder();
+    }    
 }
