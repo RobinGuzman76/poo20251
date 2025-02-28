@@ -26,5 +26,6 @@ public class Ejecutar {
         objvehiculo1.girarIzquierda();
         objvehiculo1.girarDerecha();
         objvehiculo1.retroceder();
+        
     }    
 }
