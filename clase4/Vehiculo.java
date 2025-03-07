@@ -58,5 +58,4 @@ public class Vehiculo {
     public void retroceder() {
         System.out.println("El vehículo está retrocediendo");
     }
-
 }
