@@ -18,10 +18,10 @@ public class Operario extends Trabajador {
 
     public String toString() {
         return "Operario{" +
-                "idTrabajador=" + super.getIdTrabajador() +
-                ", nombre='" + super.getNombre() + '\'' +
-                ", apellido='" + super.getApellido() + '\'' +
-                ", horas=" + horas +
+                "idTrabajador: " + super.getIdTrabajador() +
+                ", nombre: '" + super.getNombre() + '\'' +
+                ", apellido: '" + super.getApellido() + '\'' +
+                ", horas: " + horas +
                 '}';
     }
 }
