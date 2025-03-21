@@ -23,13 +23,17 @@ public class Trabajador {
         return nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
     // Metodo pagar
     public double pagar(){
         return 0.0;
     }
 
     // Metodo toString
-    @Override
+
     public String toString() {
         return "Trabajador{" +
                 "idTrabajador=" + idTrabajador +
