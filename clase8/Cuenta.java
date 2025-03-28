@@ -13,8 +13,8 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
-    // Métodos
+    // Método toString
     public String toString() {
-        return "Cuenta: " + numCuenta + " - Tipo: " + tipoCuenta + " - Saldo: " + saldo;
+        return " - Numero: " + numCuenta + " - Tipo: " + tipoCuenta + " - Saldo: " + saldo;
     }
 }
