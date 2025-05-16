@@ -1,21 +1,34 @@
 package clase9;
-
+// Nombre del archivo: Pedido.java
 public class Camara extends Producto {
-
-    //Atributos
     private String marca;
     private String modelo;
 
-    // Constructor
+    // Constructor de la clase Camara
     public Camara(int numero, String marca, String modelo) {
         super(numero);
         this.marca = marca;
         this.modelo = modelo;
     }
-    // Método toString
-    public String toString() {
-        return super.toString() + " - Camara: " + marca + " - Modelo: " + modelo;
+
+    // Métodos para obtener los atributos de la cámara
+    public String getMarca() {
+        return marca;
     }
-    
-    
+
+    // Método para obtener el modelo de la cámara
+    public String getModelo() {
+        return modelo;
+    }
+    @Override
+public String descripcion() {
+    return "Cámara - Marca: " + marca + ", Modelo: " + modelo;
+}
+@Override
+public String toString() {
+    return "Camara{" +
+            "marca='" + marca + '\'' +
+            ", modelo='" + modelo + '\'' +
+            '}';
+}
 }

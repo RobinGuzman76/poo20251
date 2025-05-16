@@ -1,22 +1,38 @@
 package clase9;
 
+import java.util.List;
 public class Impresion extends Producto {
-    
-    //Atributos
     private String color;
-    private Foto[] foto;   //Arreglo de fotos
-    
-    //Métodos
-    public void print(){
-        System.out.println("Impresion: " + this.toString());
-        for (int i = 0; i < foto.length; i++) {
-            System.out.println(foto[i].toString());
-        }
-    }
-    // Constructor
-    public Impresion(int numero, String color, Foto[] foto) {
+    private List<Foto> fotos;
+
+    public Impresion(int numero, String color, List<Foto> fotos) {
         super(numero);
         this.color = color;
-        this.foto = foto;
+        this.fotos = fotos;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public List<Foto> getFotos() {
+        return fotos;
+    }
+
+    public void imprimirFotos() {
+        for (Foto foto : fotos) {
+            foto.print();
+        }
+    }
+    @Override
+    public String descripcion() {
+        return "Impresión - Color: " + color + ", Fotos: " + fotos.size();
+    }
+    @Override
+    public String toString() {
+        return "Impresion{" +
+                "color='" + color + '\'' +
+                ", fotos=" + fotos +
+                '}';
     }
 }

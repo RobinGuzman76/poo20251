@@ -1,10 +1,14 @@
 package clase9;
-
-public class Producto {
-    
-    //Atributos
+public abstract class Producto {
     private int numero;
 
-    //Métodos
-    
+    public Producto(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public abstract String descripcion();
 }

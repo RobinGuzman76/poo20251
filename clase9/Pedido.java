@@ -1,52 +1,54 @@
 package clase9;
 
-import java.util.*;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Pedido {
-    
-    //Atributos
-
     private Cliente cliente;
-    private Producto[] producto;
-    private Date fecha;
+    private List<Producto> productos;
+    private LocalDate fecha;
     private int numeroTarjetaCredito;
 
-    //Constructor
-    public Pedido(Cliente cliente, Producto[] producto, Date fecha, int numeroTarjetaCredito ){
+    public Pedido(Cliente cliente, List<Producto> productos, LocalDate fecha, int numeroTarjetaCredito) {
+        if (cliente == null) {
+            throw new IllegalArgumentException("El cliente no puede ser nulo");
+        }
+        if (productos == null || productos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede ser nula o vacía");
+        }
+        if (fecha == null) {
+            throw new IllegalArgumentException("La fecha no puede ser nula");
+        }
         this.cliente = cliente;
-        this.producto = producto;
+        this.productos = productos;
         this.fecha = fecha;
         this.numeroTarjetaCredito = numeroTarjetaCredito;
     }
 
-    //Métodos
-    public Cliente getCliente(){
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public Producto[] getProducto(){
-        return producto;
+    public List<Producto> getProductos() {
+        return productos;
     }
 
-    public Date getFecha(){
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public int getNumeroTarjetaCredito(){
+    public int getNumeroTarjetaCredito() {
         return numeroTarjetaCredito;
     }
 
-    // Método toString
+    @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Pedido: \n");
-        sb.append(cliente.toString()).append("\n");
-        sb.append("Fecha: ").append(fecha).append("\n");
-        sb.append("Numero de tarjeta de credito: ").append(numeroTarjetaCredito).append("\n");
-        sb.append("Productos: \n");
-        for (Producto p : producto) {
-            sb.append(p.toString()).append("\n");
-        }
-        return sb.toString();
-    }    
+        String tarjetaEnmascarada = "**** **** **** " + String.valueOf(numeroTarjetaCredito).substring(Math.max(0, String.valueOf(numeroTarjetaCredito).length() - 4));
+        return "Pedido{" +
+                "cliente=" + cliente +
+                ", productos=" + productos +
+                ", fecha=" + fecha +
+                ", numeroTarjetaCredito=" + tarjetaEnmascarada +
+                '}';
+    }
 }

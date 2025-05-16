@@ -1,29 +1,18 @@
 package clase9;
 
-public class Foto {
-    
-    //Atributos
-    private String fichero;
+public class Foto extends Producto {
+    private String nombreArchivo;
 
-    //Métodos
-    public void print(){
+    public Foto(String nombreArchivo) {
+        super(0); // Se asigna un valor predeterminado para el número
+        this.nombreArchivo = nombreArchivo;
     }
 
-    // Constructor
-    public Foto(String fichero) {
-        this.fichero = fichero;
+    @Override
+    public String descripcion() {
+        return "Foto: " + nombreArchivo;
     }
-    // Método toString
-    public String toString() {
-        return " - Foto: " + fichero;
+    public void print() {
+        System.out.println("Imprimiendo foto: " + nombreArchivo);
     }
-    // Método getFichero
-    public String getFichero() {
-        return fichero;
-    }
-    // Método setFichero
-    public void setFichero(String fichero) {
-        this.fichero = fichero;
-    }
-    
 }

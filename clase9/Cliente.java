@@ -1,18 +1,30 @@
 package clase9;
+// Nombre del archivo: Pedido.java
+public class Cliente {
+    private final String cedula;
+    private final String nombre;
 
-public class Cliente{
-
-    //Atributos
-    private String cedula;
-    private String nombre;
-
-    // Constructor
+    // Constructor de la clase Cliente
     public Cliente(String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
     }
-    // Método toString
+
+    // Métodos para obtener los atributos del cliente
+    public String getCedula() {
+        return cedula;
+    }
+
+    // Método para obtener el nombre del cliente
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
     public String toString() {
-        return " - Cliente: " + cedula + " - Nombre: " + nombre;
+        return "Cliente{" +
+                "cedula='" + cedula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
 }
