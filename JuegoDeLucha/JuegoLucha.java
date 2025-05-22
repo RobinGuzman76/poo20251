@@ -1,5 +1,5 @@
 // Clase principal que gestiona el flujo del juego de lucha entre dos personajes
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 import java.util.Scanner;
 

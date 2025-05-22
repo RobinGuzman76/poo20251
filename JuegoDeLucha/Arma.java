@@ -1,5 +1,5 @@
 // Clase que representa un arma que puede usar un personaje
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 public class Arma {
     private String nombre;

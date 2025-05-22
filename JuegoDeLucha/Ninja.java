@@ -1,5 +1,5 @@
 // Clase Ninja: personaje ágil con ataques especiales aleatorios
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 import java.util.Random;
 

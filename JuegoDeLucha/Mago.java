@@ -1,5 +1,5 @@
 // Clase Mago: personaje que utiliza magia para atacar
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 public class Mago extends Personaje {
     // Constructor: inicializa el nombre usando la superclase

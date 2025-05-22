@@ -1,6 +1,6 @@
 // Clase abstracta base para todos los personajes del juego de lucha
 // Define atributos y métodos comunes
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 import java.util.Random;
 

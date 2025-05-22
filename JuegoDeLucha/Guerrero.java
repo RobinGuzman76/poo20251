@@ -1,5 +1,5 @@
 // Clase Guerrero: personaje especializado en ataques físicos
-package JuagoDeLucha;
+package JuegoDeLucha;
 
 public class Guerrero extends Personaje {
   // Constructor: inicializa el nombre usando la superclase
